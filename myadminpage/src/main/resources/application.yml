@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/MyAdminPage?allowPublicKeyRetrieval=true&useSSL=false&useUnicode=true&serverTimezone=Asia/Seoul
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 1234
+
+    validation-timeout: 10000
+    validation-interval: 180000
+    validationQuery: SELECT 1
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+#    generate-ddl: true #앱실행 시 create 여부 설정
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+  devtools:
+    livereload:
+      enabled: true
+
+  mustache:
+    cache: false
+
+
+
+

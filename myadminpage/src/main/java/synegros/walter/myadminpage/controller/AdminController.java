@@ -9,14 +9,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class AdminController {
 
 
-    @GetMapping("/admin")
-    public String admin(){
-        return "admin";
+    @GetMapping("/main")
+    public String main(){
+        return "main";
     }
 
-    @GetMapping("/superadmin")
-    public String superadmin(){
-        return "superadmin";
+    @GetMapping("/admin")
+    public String admin(){
+        return "/adminpage/admin";
+    }
+
+    /* ================ admin manage ========================== */
+
+    String adminmanage = "/adminpage/adminmanage";
+
+    @GetMapping("/adminmanage")
+    public String adminManage(){
+        return adminmanage + "/adminmanage";
     }
 
     @GetMapping("/accessDenied")

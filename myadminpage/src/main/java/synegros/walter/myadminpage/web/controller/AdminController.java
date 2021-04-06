@@ -1,4 +1,4 @@
-package synegros.walter.myadminpage.controller;
+package synegros.walter.myadminpage.web.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

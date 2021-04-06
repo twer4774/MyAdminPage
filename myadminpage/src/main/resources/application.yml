@@ -3,7 +3,7 @@ spring:
     url: jdbc:mysql://localhost:3306/MyAdminPage?allowPublicKeyRetrieval=true&useSSL=false&useUnicode=true&serverTimezone=Asia/Seoul
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
-    password: 1234
+    password:
 
     validation-timeout: 10000
     validation-interval: 180000

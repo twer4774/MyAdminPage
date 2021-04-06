@@ -1,7 +1,6 @@
 package synegros.walter.myadminpage.model.repository;
 
 import lombok.extern.slf4j.Slf4j;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -16,12 +15,14 @@ import java.util.Optional;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
+
 @SpringBootTest
 @Slf4j
 class AdminUserRepositoryTest {
 
     @Autowired
     private AdminUserRepository adminUserRepository;
+
 
 //    @Disabled
     @Test
@@ -49,7 +50,7 @@ class AdminUserRepositoryTest {
                 .build();
 
         log.info("{}", adminUser);
-        adminUserRepository.save(adminUser);
+//        adminUserRepository.save(adminUser);
     }
 
 

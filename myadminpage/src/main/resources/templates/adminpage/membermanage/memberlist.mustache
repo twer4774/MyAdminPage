@@ -1,10 +1,50 @@
-{{>layout/header}}
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>My Admin Page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/memberList.css">
 
 </head>
 <body>
 
-<section id="wrapper">
-    <div style="color:white">memberlist</div>
-</section>
+<div class="container">
+    <section>
+        <h3><div class="title">MemberList</div></h3>
+    </section>
+    <section id="wrapper">
+
+    <div style="color:white">
+        <table class="table table-bordered table-striped">
+            <thead>
+            <tr class="mainTD">
+                <th>MemberId</th>
+                <th>NickName</th>
+                <th>Gender</th>
+                <th>CreatedAt</th>
+                <th>UpdatedAt</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#memberList}}
+            <tr>
+                <td>{{memberId}}</td>
+                <td>{{nickName}}</td>
+                <td>{{gender}}</td>
+                <td>{{createdAt}}</td>
+                <td>{{updatedAt}}</td>
+            </tr>
+            {{/memberList}}
+            </tbody>
+        </table>
+    </div>
+    </section>
+</div>
 
 {{>layout/footer}}

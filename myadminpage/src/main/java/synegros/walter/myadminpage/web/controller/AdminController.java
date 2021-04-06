@@ -8,20 +8,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("")
 public class AdminController {
 
-
-    @GetMapping("/main")
-    public String main(){
-        return "main";
-    }
-
     @GetMapping("/admin")
     public String admin(){
-        return "/adminpage/admin";
+        return "/admin";
     }
 
     /* ================ admin manage ========================== */
 
-    String adminmanage = "/adminpage/adminmanage";
+    String adminmanage = "/adminmanage";
 
     @GetMapping("/adminmanage")
     public String adminManage(){

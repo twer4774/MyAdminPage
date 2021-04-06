@@ -24,7 +24,7 @@ public class LoginController {
         return "loginForm";
     }
 
-    @PostMapping("/loginCheck")
+    /*@PostMapping("/loginCheck")
     //todo : 된다면 adminUerDto 만들기
     public Optional<AdminUser> loginCheck(AdminUser adminUser){
         String adminId = adminUser.getAdminId();
@@ -32,6 +32,6 @@ public class LoginController {
 
 
         return loginService.login(adminId, password);
-    }
+    }*/
 
 }

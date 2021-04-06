@@ -19,55 +19,16 @@ function siblings(el) {
 
 const memberList = $('.member-list')
 const adminManage = $('.admin-manage')
-const showAsideBtn = $('.show-side-btn')
-const sidebar = $('.sidebar')
 const wrapper = $('#wrapper')
 
 /* ============= 사이드바 카테고리 동작  =============== */
 memberList.addEventListener('click', function(){
-    console.log(this);
-
-     $.ajax({
-          type: 'GET',
-          url: '/member/memberlist',
-          dataType: 'text',
-          contentType:'application/json; charset=utf-8',
-      }).done(function(res) {
-            document.getElementById("template").innerHTML=res;
-      }).fail(function (error) {
-          alert(JSON.stringify(error));
-      });
+    window.location.href="/member/memberList";
 })
 
 adminManage.addEventListener('click', function(){
-    console.log(this);
-
-     $.ajax({
-          type: 'GET',
-          url: '/adminmanage',
-          dataType: 'text',
-          contentType:'application/json; charset=utf-8',
-      }).done(function(res) {
-            document.getElementById("template").innerHTML=res;
-      }).fail(function (error) {
-          alert(JSON.stringify(error));
-      });
+    window.location.href="/admin";
 })
-
-//showAsideBtn.addEventListener('click', function () {
-//	$(`#${this.dataset.show}`).classList.toggle('show-sidebar')
-//	wrapper.classList.toggle('fullwidth')
-//})
-
-//if (window.innerWidth < 767) {
-//	sidebar.classList.add('show-sidebar');
-//}
-
-//window.addEventListener('resize', function () {
-//	if (window.innerWidth > 767) {
-//		sidebar.classList.remove('show-sidebar')
-//	}
-//})
 
 // dropdown menu in the side nav
 var slideNavDropdown = $('.sidebar-dropdown');

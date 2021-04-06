@@ -1,0 +1,43 @@
+{{>layout/header}}
+<link rel="stylesheet" type="text/css" href="/css/memberList.css">
+
+<section id="wrapper">
+        <h3><div class="title">MemberList</div></h3>
+
+    <div style="color:white">
+        <table class="table table-bordered table-striped">
+            <thead>
+            <tr class="mainTD">
+                <th>MemberId</th>
+                <th>NickName</th>
+                <th>Gender</th>
+                <th>CreatedAt</th>
+                <th>UpdatedAt</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#memberList}}
+            <tr>
+                <td>{{memberId}}</td>
+                <td>{{nickName}}</td>
+                <td>{{gender}}</td>
+                <td>{{createdAt}}</td>
+                <td>{{updatedAt}}</td>
+            </tr>
+            {{/memberList}}
+            </tbody>
+        </table>
+
+        <ul class="pagination justify-content-center">
+<!--            <li><button class="btn-outline-success" id="previous">&lsaquo; Previous</button></li>-->
+            <li><a href="?page={{Previous}}">&lsaquo; Previous</a></li>
+            &nbsp;&nbsp; <li id="currentPage" value="{{currentPage}}">{{currentPage}}</li> &nbsp;&nbsp;
+            <li><a href="?page={{Next}}">Next &rsaquo;</a></li>
+<!--            <li><button class="btn-outline-success" id="next">Next &rsaquo;</button></li>-->
+        </ul>
+    </div>
+</section>
+<script src="/js/memberList.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+{{>layout/footer}}
